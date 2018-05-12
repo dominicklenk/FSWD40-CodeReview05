@@ -1,0 +1,111 @@
+/* body styling */
+body {
+	background-color: #E9EBEE;
+	font-family: "Museo Sans", Ubuntu, Tahoma, Verdana, Arial, Helvetica, sans-serif;
+	margin: 0;
+}
+
+/* cover over page */
+#wrapper {
+max-width: 1280px;
+margin: 0 auto;
+}
+
+/* topbar and img */
+#top {
+	background-color: #832693;
+	padding-top: 2.5ex;
+	margin: 0 auto;
+	height: 112px;
+	max-width: 1240px;
+}
+
+/* alteration for topbar and bottom-bar */
+#top, footer {
+	text-align: center;
+	width: 100%;
+}
+
+/* welcome to our website section */
+#introduce {
+	text-align: center;
+}
+
+#introduce img {
+	max-width: 1240px;
+	vertical-align: middle;
+	position: relative;
+	width: 100%;
+}
+
+h1 {
+	color: rgb(255,255,255);
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	top: 50%;
+	font-size: 70px;
+}
+
+/* person profiles section */
+.container {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+}
+
+.column {
+	flex-basis: calc(50% - 60px);  
+	flex-direction: column;
+	padding: 10px;
+	margin: 20px;
+	background-color: #D5C0D9;
+}
+
+.person img {
+	float: left;
+	max-width: 150px;
+	margin: 0px 20px 0px 15px;
+}
+
+div.likeit {
+	clear: both;
+	float: right;
+	font-size: 32px;
+	font-weight: bold;
+	color: red;
+}
+
+.likeit span {
+	padding: 0px 0px 0px 14px;
+}
+
+/* all buttons */
+button {
+	background-color: lightcyan;
+	border-radius: 10px;
+	font-size: 30px;
+	border: 1px solid black;
+}
+
+/* bottom-bar */
+footer {
+	border-top: 2px solid black;
+	padding: 3.5ex 0 6ex 0;
+}
+
+footer button {
+	margin-bottom: 30px;
+}
+
+
+@media screen and (max-width: 640px) {
+	.column {
+	flex-basis: 100%;
+	}
+	h1 {
+	font-size: 35px;
+	top: 25%;
+	}
+
+}
