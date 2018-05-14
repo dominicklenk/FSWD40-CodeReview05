@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-var Members = [
+var Members = [						// array of Members objects
             {
 			name: 'John',
 			surname: 'Doe',
@@ -32,16 +32,16 @@ var Members = [
 			age: 24,
    			myPhoto: "img/boy2.jpg",	
 			likes: 0
-			},
+			}
 ];
 
 
 for (let u = 0; u < Members.length; u++) {
-	$('.member').eq(u).append('<img src=\"'+Members[u].myPhoto+'\"><p>Name: '+Members[u].name+'</p><p>Surname: '+Members[u].surname+'</p><p>Age: '+Members[u].age+'</p>');
+	$('.member').eq(u).append('<img src=\"'+Members[u].myPhoto+'\"><p>Name: '+Members[u].name+'</p><p>Surname: '+Members[u].surname+'</p><p>Age: '+Members[u].age+'</p>'); // constructs new jquery object(u) and append pic, name, surname and age from array.
 
-	$('.likeit').eq(u).append('<button id="button'+u+'">Like</button><span id="like'+u+'">0</span>&nbsp;<img src="img/like.png" alt="like">');
+	$('.likeit').eq(u).append('<button id="button'+u+'">Like</button><span id="like'+u+'">0</span>&nbsp;<img src="img/like.png" alt="like">');								// adds button and starts from 0 like and heart-pic
 
-	$('#button'+u).on('click', function() {		
+	$('#button'+u).on('click', function() {		// on-click function
 		Members[u].likes += 1;
 		$('#like'+u).html(Members[u].likes);
 	});
@@ -67,4 +67,11 @@ for (let u = 0; u < Members.length; u++) {
 $('#sort-it').on('click', sortMembers);
 
 console.log(Members); */
+
+/* $('.column').hide();
+
+$(window).scroll(function(){
+    $(".column").fadeIn(3000);
+}); */
+
 });
